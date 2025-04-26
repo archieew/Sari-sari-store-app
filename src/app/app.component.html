@@ -1,0 +1,272 @@
+<!-- <h1>{{ title }}</h1>
+
+<input type="text" [value]="clientName" />
+
+<p [style.color]="myColor">This text was style using binding!</p>
+
+<p [class]="appliedCSS">This line applied *myClass* property.</p>
+
+<button (click)="clickMe()">Click Me</button>
+<button (click)="resetClickCount()">Reset</button>
+<p>You have clicked {{ clickCount }} times!</p> -->
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#!">KRIZIA'S STORE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">All Products</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+<!-- your-component.component.html -->
+<!-- ... previous HTML code ... -->
+
+<form class="d-flex">
+    <button class="btn btn-outline-dark" type="submit">
+        <i class="bi-cart-fill me-1">YOUR CART</i>
+        <span class="badge bg-dark text-white ms-1 rounded-pill">{{ getTotalItemCount() }}</span>
+    </button>
+</form>
+
+<!-- ... rest of your HTML code ... -->
+
+            </form>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="py-5">
+    <div class="container px-4 px-lg-5 my-5 d-flex align-items-center justify-content-center" style="background-color: pink; max-width: 1200px; height: 500px;">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">KRIZIA'S SARI-SARI STORE</h1>
+            <p class="lead fw-normal text-white-50 mb-0">SHOP ONLINE HERE</p>
+        </div>
+    </div>
+</header>
+
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://www.shoppersmart.com.ph/cdn/shop/products/Piattos_Potato_Chips_Cheese_40g_c298891e-72a8-420f-9176-aa84cff95ef6_1024x.jpg?v=1603363795" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">PIATTOS</h5>
+                                    <!-- Product price-->
+                                    ₱ 15.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(0)">Add</button>
+                            <button (click)="resetClickCount(0)">Remove</button>
+                            <p class="first">You added {{ itemCounts[0] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://d2t3trus7wwxyy.cloudfront.net/catalog/product/c/l/cloud-9-classic-bar-28g_1.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">CLOUD 9</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">₱ 12.00</span>
+                                    ₱ 10.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(1)">Add</button>
+                            <button (click)="resetClickCount(1)">Remove</button>
+                            <p class="second">You added {{ itemCounts[1] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://res.cloudinary.com/chotcut/image/upload/v1635153826/products/ouzhmqhjp2joaouzfxha.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">SPRITE</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">₱ 20.00</span>
+                                    ₱ 15.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(2)">Add</button>
+                            <button (click)="resetClickCount(2)">Remove</button>
+                            <p class="third">You added {{ itemCounts[2] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hpsuperstore.net.ph/cdn/shop/products/CDOIdolHotdogCheesedogJumbo500g4800249091076110.80_1024x.jpg?v=1674529104" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">CDO IDOL CHEESEDOG</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱ 10.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(3)">Add</button>
+                            <button (click)="resetClickCount(3)">Remove</button>
+                            <p class="fourth">You added {{ itemCounts[3] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://down-ph.img.susercontent.com/file/55970b2a4ff103851017af4df7b5e2d0" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">CHOCO MUCHO COOKIE SANDWICH</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">₱ 10.00</span>
+                                    ₱ 7.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(4)">Add</button>
+                            <button (click)="resetClickCount(4)">Remove</button>
+                            <p class="fifth">You added {{ itemCounts[4] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://d2t3trus7wwxyy.cloudfront.net/catalog/product/c/h/cheezy_outrageously_spicy_cheesy_70g.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">CHEEZY</h5>
+                                    <!-- Product price-->
+                                    ₱ 30.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(5)">Add</button>
+                            <button (click)="resetClickCount(5)">Remove</button>
+                            <p class="sixth">You added {{ itemCounts[5] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://shopmetro.ph/pasig-supermarket/wp-content/uploads/2023/10/SM103428951-12.jpg" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">SINIGANG MIX</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">₱ 12.00</span>
+                                    ₱ 9.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(6)">Add</button>
+                            <button (click)="resetClickCount(6)">Remove</button>
+                            <p class="seventh">You added {{ itemCounts[6] }} product</p>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://hpsuperstore.net.ph/cdn/shop/products/LuckymePancitCantonChilimansi80gx72.jpg?v=1668756320" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">PANCIT CANTON</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    ₱ 15.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <button (click)="clickMe(7)">Add</button>
+                            <button (click)="resetClickCount(7)">Remove</button>
+                            <p class="eighth">You added {{ itemCounts[7] }} product</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+<footer class="py-5" style="background-color: pink;">
+    <div class="container" >
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+    </div>
+</footer>
+
+
+
+
+
+

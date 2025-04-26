@@ -1,0 +1,96 @@
+.green{
+    color:green;
+}
+
+.blue{
+    color:blue;
+    
+}
+/* your-component.component.css */
+/* Custom styles for the buttons */
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; 
+}
+
+button {
+    background-color: #fff;
+    color: #000;
+    padding: 8px 16px; 
+    font-size: 14px;  
+    border: 2px solid #000; 
+    border-radius: 5px;
+    cursor: pointer;
+    
+    display: inline-block;
+}
+
+button.reset {
+    background-color: #fff;
+    color: #000;
+}
+
+.first {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.second {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.third {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.fourth {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.fifth {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.sixth {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.seventh {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+.eighth {
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+
+
+
+
+
+  
